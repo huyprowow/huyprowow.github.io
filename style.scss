@@ -1,0 +1,178 @@
+* {
+    cursor: url(../standard.cur), auto;
+    box-sizing: border-box;
+
+    body {
+        display: flex;
+        // justify-content: center;
+        // align-content: center;
+        flex-direction: column;
+        width: auto;
+        height: 100vh;
+        background: #03001e;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(-45deg, #fdeff9, #ec38bc, #7303c0, #03001e);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(-45deg, #03001e, #7303c0, #ec38bc, #fdeff9, rgb(238, 213, 233));
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-size: 400% 400%;
+        background-repeat: no-repeat;
+        animation: bgGrad 15s ease infinite;
+
+        header {
+            display: flex;
+            flex-direction: row;
+
+            #animation {
+                width: 15vw;
+                height: 15vw;
+                flex: 15;
+                display: inline-block;
+                background-image: url(../images/ani1.jfif);
+                background-size: cover;
+                background-repeat: no-repeat;
+                animation: aniGirl 4s infinite;
+                -webkit-animation: aniGirl 4s infinite;
+               
+                    border: 5px solid;
+                    border-image-slice: 1;
+                    border-image-source: linear-gradient(-45deg, #743ad5, #d53a9d);
+                  
+            }
+
+            h1 {
+                flex: 80;
+                font-size: 5vw;
+
+            }
+        }
+        #scroll-top {
+            position: fixed;
+            z-index: 999;
+            right: 1em;
+            bottom: 1em;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            font-weight: bold;
+            padding-top: 0.5em;
+            width: 2em;
+            height: 2em;
+            border: 1px solid black;
+            border-radius: 50%;
+
+        }
+
+        footer {
+            a {
+                text-decoration: none;
+
+                i {
+                    border-radius: 50%;
+                    background-color: black;
+                }
+
+                i:hover {
+                    color: black;
+                    background-color: white;
+                }
+            }
+        }
+    }
+}
+
+@keyframes bgGrad {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes aniGirl {
+    0% {
+        background-image: url(../images/ani1.jfif);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    16% {
+        background-image: url(../images/ani2.jfif);
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+    }
+
+    32% {
+        background-image: url(../images/ani3.jfif);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    48% {
+        background-image: url(../images/ani4.jfif);
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+    }
+
+    64% {
+        background-image: url(../images/ani5.jfif);
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+    }
+
+    80% {
+        background-image: url(../images/ani6.jfif);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+@-webkit-keyframes aniGirl {
+    0% {
+        background-image: url(../images/ani1.jfif);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    16% {
+        background-image: url(../images/ani2.jfif);
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+    }
+
+    32% {
+        background-image: url(../images/ani3.jfif);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    48% {
+        background-image: url(../images/ani4.jfif);
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+    }
+
+    64% {
+        background-image: url(../images/ani5.jfif);
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+    }
+
+    80% {
+        background-image: url(../images/ani6.jfif);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
