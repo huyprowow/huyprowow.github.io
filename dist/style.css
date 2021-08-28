@@ -1,6 +1,8 @@
 * {
   cursor: url(../standard.cur), auto;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 * body {
   display: flex;
@@ -38,6 +40,40 @@
 * body header h1 {
   flex: 80;
   font-size: 5vw;
+  padding-left: 1em;
+}
+* body main {
+  margin: 1em;
+}
+* body main #skill {
+  height: 50vh;
+}
+* body main #skill ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1em;
+}
+* body main #skill ul li {
+  list-style: none;
+}
+* body main #game {
+  height: 100vh;
+}
+* body main #game h1 {
+  padding-bottom: 1em;
+}
+* body main #game #game-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+* body main #game #game-container img {
+  width: 40vw;
+  height: 50vh;
+}
+* body main #game #game-container img:hover {
+  box-shadow: 2px 2px 5px 5px #0d102e;
 }
 * body #scroll-top {
   position: fixed;
@@ -48,11 +84,24 @@
   display: inline-block;
   text-align: center;
   font-weight: bold;
-  padding-top: 0.5em;
-  width: 2em;
-  height: 2em;
+  padding-top: 1em;
+  width: 3em;
+  height: 3em;
   border: 1px solid black;
   border-radius: 50%;
+  background-color: #fdeff9;
+}
+* body #scroll-top:hover {
+  box-shadow: 1px 1px 10px black;
+}
+* body footer {
+  height: 50vh;
+  margin-top: 2em;
+  padding: 1em 1em;
+}
+* body footer div span {
+  display: inline-block;
+  padding: 0.5em 0em;
 }
 * body footer a {
   text-decoration: none;
@@ -65,7 +114,19 @@
   color: black;
   background-color: white;
 }
+* body footer p {
+  text-align: center;
+}
 
+@media (max-width: 768px) {
+  #skill ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  #skill ul li {
+    margin: 1em;
+  }
+}
 @keyframes bgGrad {
   0% {
     background-position: 0% 50%;
