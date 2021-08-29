@@ -105,6 +105,7 @@
             background-color: transparent;
             @include border;
             visibility: hidden;
+            overflow: hidden;
 
             a {
                 text-decoration: none;

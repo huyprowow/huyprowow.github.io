@@ -73,6 +73,7 @@
   border-image-slice: 1;
   border-image-source: linear-gradient(-45deg, #743ad5, #d53a9d);
   visibility: hidden;
+  overflow: hidden;
 }
 * body nav a {
   text-decoration: none;
