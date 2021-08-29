@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel='stylesheet' href='/dist/style.css'>
+    <link href='https://fonts.googleapis.com/css?family=Vibur:400' rel='stylesheet' type='text/css'>
     <script async src="https://kit.fontawesome.com/6310d1a086.js" crossorigin="anonymous"></script>
     <title>Huyprowow</title>
 </head>
@@ -16,19 +17,28 @@
         <div id='animation'></div>
         <h1>Wellcome to my page</h1>
     </header>
+    <i id="menu" class="fa fa-bars"></i>
     <nav id="navbar">
-
+        <i id='hidden' class="fa fa-eye-slash"></i>
+        <a href="#skill">Skills</a>
+        <a href="#project">Projects</a>
+        <a href="#certificate">Certificates</a>
         <a href="#game">Games</a>
-        <a href="skill">Skills</a>
         <a href="#footer">Contact</a>
     </nav>
     <main>
+        <section id='greeting'>
+            <pre>
+                Hi there, my name is Huy, I'm a Software Engineer
+                            glad you to came
+            </pre>
+        </section>
         <section id='skill'>
             <h2>Skills:</h2>
             <ul>
                 <li>
-                    <h3> <i class="fa fa-desktop"></i>Language</h3>
-                    Javascript, NodeJs
+                    <h3><i class="fa fa-desktop"></i>Language</h3>
+                   <p> Javascript, NodeJs,TypeScript</p>
                 </li>
                 <li>
                     <h3> <i class="fa fa-database"></i>Database</h3>
@@ -36,12 +46,40 @@
                 </li>
                 <li>
                     <h3> Library-Framework</h3>
-                    ReactJs, Express, BootStrap, JQuery, Scss
+                    <p>ReactJs, Express, BootStrap, JQuery, Scss</p>
                 </li>
             </ul>
         </section>
+
+        <section id='project'>
+            <h2>Projects:</h2>
+            <p>you can see some my silly personal project a <a href="https://codepen.io/huyprowow/"
+                    target="_blank">here</a> and my <a href="https://github.com/huyprowow">github</a></p>
+        </section>
+        <section id='certificate'>
+            <h2>Certificates:</h2>
+            <p>I got some certificates when i study in <a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp websites</a> althought i know it's not value much :v</p>
+            <div id="certi-container">
+                <div id='certi-1'>
+                    <a href="https://www.freecodecamp.org/certification/huyprowow/front-end-libraries" target="_blank">
+                        <img src="./images/certifi1.png" alt='certificate'>
+                    </a>
+                </div>
+                <div id='certi-2'>
+                    <a href="https://www.freecodecamp.org/certification/huyprowow/javascript-algorithms-and-data-structures" target="_blank">
+                        <img src="./images/certifi2.png" alt='certificate'>
+                    </a>
+                </div>
+                <div id='certi-3'>
+                    <a href="https://www.freecodecamp.org/certification/huyprowow/responsive-web-design" target="_blank">
+                        <img src="./images/certifi3.png" alt='certificate'>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <section id='game'>
-            <h1>Games:</h1>
+            <h2>Games:</h2>
             <div id="game-container">
                 <div id='game-1'>
                     <a href="https://huyprowow.github.io/Oriented_Practice_Bouncing/" target="_blank">
@@ -50,7 +88,7 @@
                 </div>
                 <div id='game-2'>
                     <a href="https://huyprowow.github.io/flappy-bird/" target="_blank">
-                        <img src="./images/flappy-bird.png" alt="boucing ball">
+                        <img src="./images/flappy-bird.png" alt="flappy-bird">
                     </a>
                 </div>
 
@@ -87,6 +125,19 @@
         </a>
         <p>Huyprowow © 2021</p>
     </footer>
+
+<script>
+    const menu=document.querySelector('#menu');
+    const navBar=document.querySelector('#navbar');
+    menu.addEventListener('click',()=>{
+        navBar.style.visibility="visible";
+        menu.style.visibility='hidden';
+    })
+    navBar.addEventListener('click',()=>{
+        menu.style.visibility="visible";
+        navBar.style.visibility='hidden';
+    })
+</script>
 </body>
 
 </html>

@@ -4,6 +4,25 @@
     border-image-source: linear-gradient(-45deg, #743ad5, #d53a9d);
 }
 
+@mixin cardImg {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 1em;
+
+    img:hover {
+        box-shadow: 2px 2px 5px 5px rgb(13, 16, 46);
+    }
+}
+
+@mixin menuPosition {
+    position: fixed;
+    z-index: 999;
+    right: 1em;
+    top: 1em;
+}
+
+
 * {
     cursor: url(../standard.cur), auto;
     box-sizing: border-box;
@@ -23,9 +42,10 @@
         /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(-45deg, #03001e, #7303c0, #ec38bc, #fdeff9, rgb(238, 213, 233));
         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        background-size: 400% 400%;
+        background-size: 600% 600%;
         background-repeat: no-repeat;
         animation: bgGrad 15s ease infinite;
+        -webkit-animation: bgGrad 15s ease infinite;
 
         header {
             display: flex;
@@ -41,19 +61,88 @@
                 background-repeat: no-repeat;
                 animation: aniGirl 4s infinite;
                 -webkit-animation: aniGirl 4s infinite;
-                @include border
+                @include border;
             }
 
             h1 {
                 flex: 80;
                 font-size: 5vw;
-                padding-left: 1em;
+                margin-top: 5vh;
+                color: #fff;
+                text-shadow:
+                    0 0 7px #fff,
+                    0 0 10px #fff,
+                    0 0 21px #fff,
+                    0 0 42px #f09,
+                    0 0 82px #f09,
+                    0 0 92px #f09,
+                    0 0 102px #f09,
+                    0 0 151px #f09;
+                /* Additional styling */
+                font-family: "Vibur", sans-serif;
+                text-align: center;
+                vertical-align: middle;
+                font-weight: 400;
+                line-height: 1;
+                animation: pulsate 0.11s ease-in-out infinite alternate;
+                -webkit-animation: pulsate 0.11s ease-in-out infinite alternate;
+            }
+        }
+
+        #menu {
+            position: fixed;
+            z-index: 999;
+            right: 1em;
+            top: 1em;
+            font-size: 1.2em;
+        }
+
+        nav {
+            display: flex;
+            flex-flow: column wrap;
+            @include menuPosition;
+            width: 20vw;
+            background-color: transparent;
+            @include border;
+            visibility: hidden;
+
+            a {
+                text-decoration: none;
+                color: black;
+                padding: 0.5em;
+                border-bottom: 1px solid;
+                border-image-slice: 1;
+                border-image-source: linear-gradient(-45deg, #743ad5, #d53a9d);
+            }
+
+            a:hover {
+
+                background-image: linear-gradient(103.3deg, rgba(162, 186, 245, 1) 30%, rgba(255, 173, 214, 1) 55.7%, rgba(252, 225, 208, 1) 81.8%);
             }
         }
 
         main {
-
             margin: 1em;
+
+            h2 {
+                padding: 0.5em 0;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            a:hover {
+                font-size: 2em;
+                color: red;
+                transition: 1s;
+            }
+
+            #greeting {
+                pre {
+                    font-family: "Vibur", sans-serif;
+                }
+            }
 
             #skill {
                 //section
@@ -72,22 +161,36 @@
                 }
             }
 
+            p {
+                padding: 1em;
+            }
+
+            #project {
+                height: 20vh;
+            }
+
+            #certificate {
+                height: 40vh;
+
+                #certi-container {
+                    @include cardImg;
+
+                    img {
+                        width: 20vw;
+                        height: 20vh;
+                    }
+                }
+            }
+
             #game {
                 height: 100vh;
-                h1{
-                    padding-bottom: 1em;
-                }
+
                 #game-container {
-                    display: flex;
-                    flex-flow: row wrap;
-                    justify-content: space-around;
+                    @include cardImg;
 
                     img {
                         width: 40vw;
                         height: 50vh;
-                    }
-                    img:hover{
-                        box-shadow: 2px 2px 5px 5px rgb(13, 16, 46);
                     }
                 }
             }
@@ -108,7 +211,6 @@
             border: 1px solid black;
             border-radius: 50%;
             background-color: #fdeff9;
-
         }
 
         #scroll-top:hover {
@@ -118,7 +220,7 @@
 
         footer {
             height: 50vh;
-            margin-top:2em;
+            margin-top: 2em;
             padding: 1em 1em;
 
             div {
@@ -147,27 +249,105 @@
             }
         }
     }
+
 }
 
 @media (max-width: 768px) {
-    #skill{
-        ul{
-            
+    #skill {
+        ul {
+
             flex-direction: column;
             // justify-content:none;
             text-align: center;
-            li{
+
+            li {
                 margin: 1em;
             }
         }
     }
-    #game{
-        #game-container{
-            
-        }
+
+    #game {
+        #game-container {}
     }
 }
+
+@keyframes pulsate {
+
+    100% {
+
+        text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px #f09,
+            0 0 80px #f09,
+            0 0 90px #f09,
+            0 0 100px #f09,
+            0 0 150px #f09;
+
+    }
+
+    0% {
+
+        text-shadow:
+            0 0 4px #fff,
+            0 0 10px #fff,
+            0 0 18px #fff,
+            0 0 38px #f09,
+            0 0 73px #f09,
+            0 0 80px #f09,
+            0 0 94px #f09,
+            0 0 140px #f09;
+
+    }
+}
+
+@-webkit-keyframes pulsate {
+
+    100% {
+
+        text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px #f09,
+            0 0 80px #f09,
+            0 0 90px #f09,
+            0 0 100px #f09,
+            0 0 150px #f09;
+
+    }
+
+    0% {
+
+        text-shadow:
+            0 0 4px #fff,
+            0 0 10px #fff,
+            0 0 18px #fff,
+            0 0 38px #f09,
+            0 0 73px #f09,
+            0 0 80px #f09,
+            0 0 94px #f09,
+            0 0 140px #f09;
+
+    }
+}
+
 @keyframes bgGrad {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@-webkit-keyframes bgGrad {
     0% {
         background-position: 0% 50%;
     }
