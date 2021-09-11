@@ -15,7 +15,7 @@
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(-45deg, #03001e, #7303c0, #ec38bc, #fdeff9, #eed5e9);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-size: 600% 600%;
+  background-size: 650% 650%;
   background-repeat: no-repeat;
   animation: bgGrad 15s ease infinite;
   -webkit-animation: bgGrad 15s ease infinite;
@@ -122,7 +122,7 @@
   height: 20vh;
 }
 * body main #certificate {
-  height: 40vh;
+  height: 60vh;
 }
 * body main #certificate #certi-container {
   display: flex;
@@ -174,7 +174,7 @@
 }
 * body footer {
   height: 50vh;
-  margin-top: 2em;
+  margin-top: 3em;
   padding: 1em 1em;
 }
 * body footer div span {
@@ -196,13 +196,23 @@
   text-align: center;
 }
 
+@media (max-width: 736px) {
+  #skill {
+    margin-bottom: 10vw;
+  }
+}
 @media (max-width: 768px) {
   #skill ul {
+    height: 45vh;
     flex-direction: column;
     text-align: center;
   }
   #skill ul li {
     margin: 1em;
+  }
+
+  #navbar {
+    width: 25vw;
   }
 }
 @keyframes pulsate {

@@ -42,7 +42,7 @@
         /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(-45deg, #03001e, #7303c0, #ec38bc, #fdeff9, rgb(238, 213, 233));
         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        background-size: 600% 600%;
+        background-size: 650% 650%;
         background-repeat: no-repeat;
         animation: bgGrad 15s ease infinite;
         -webkit-animation: bgGrad 15s ease infinite;
@@ -171,7 +171,7 @@
             }
 
             #certificate {
-                height: 40vh;
+                height: 60vh;
 
                 #certi-container {
                     @include cardImg;
@@ -221,7 +221,7 @@
 
         footer {
             height: 50vh;
-            margin-top: 2em;
+            margin-top: 3em;
             padding: 1em 1em;
 
             div {
@@ -253,10 +253,16 @@
 
 }
 
+@media (max-width: 736px) {
+    #skill {
+        margin-bottom: 10vw;
+    }
+}
+
 @media (max-width: 768px) {
     #skill {
         ul {
-
+            height: 45vh;
             flex-direction: column;
             // justify-content:none;
             text-align: center;
@@ -267,9 +273,11 @@
         }
     }
 
-    #game {
-        #game-container {}
+    #navbar {
+        width: 25vw;
     }
+
+
 }
 
 @keyframes pulsate {
