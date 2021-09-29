@@ -9,11 +9,14 @@
   flex-direction: column;
   width: auto;
   height: 100vh;
-  background: #03001e;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(-45deg, #fdeff9, #ec38bc, #7303c0, #03001e);
+  background: -webkit-linear-gradient(-45deg, #fdeff9, #ec38bc, #7303c0, #03001e) fixed;
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(-45deg, #03001e, #7303c0, #ec38bc, #fdeff9, #eed5e9);
+  background: linear-gradient(-45deg, #03001e, #7303c0, #ec38bc, #fdeff9, #eed5e9) fixed;
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: 650% 650%;
   background-repeat: no-repeat;
@@ -194,6 +197,9 @@
 }
 * body footer p {
   text-align: center;
+}
+* body::-webkit-scrollbar {
+  display: none;
 }
 
 @media (max-width: 736px) {
