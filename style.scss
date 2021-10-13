@@ -4,7 +4,7 @@
     border-image-source: linear-gradient(-45deg, #743ad5, #d53a9d);
 }
 
-@mixin cardImg {
+@mixin flexContent {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -21,7 +21,6 @@
     right: 1em;
     top: 1em;
 }
-
 
 * {
     cursor: url(../standard.cur), auto;
@@ -177,7 +176,7 @@
                 height: 60vh;
 
                 #certi-container {
-                    @include cardImg;
+                    @include flexContent;
 
                     img {
                         width: 20vw;
@@ -186,11 +185,24 @@
                 }
             }
 
+            #graphic {
+                height: 70vh;
+
+                #graphic-container {
+                    @include flexContent;
+
+                    iframe {
+                        width: 43vw;
+                        height: 50vh;
+                    }
+                }
+            }
+
             #game {
                 height: 100vh;
 
                 #game-container {
-                    @include cardImg;
+                    @include flexContent;
 
                     img {
                         width: 40vw;
@@ -223,8 +235,8 @@
         }
 
         footer {
-            height: 50vh;
-            margin-top: 3em;
+            height: 60vh;
+            margin-top: 4em;
             padding: 1em 1em;
 
             div {
@@ -262,8 +274,18 @@
 
 
 @media (max-width: 736px) {
+
+    //6spl
     #skill {
         margin-bottom: 10vw;
+    }
+
+    #graphic {
+        #graphic-container {
+            #graphic-1 {}
+
+            #graphic-1 {}
+        }
     }
 }
 

@@ -140,6 +140,22 @@
   width: 20vw;
   height: 20vh;
 }
+* body main #graphic {
+  height: 70vh;
+}
+* body main #graphic #graphic-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 1em;
+}
+* body main #graphic #graphic-container img:hover {
+  box-shadow: 2px 2px 5px 5px #0d102e;
+}
+* body main #graphic #graphic-container iframe {
+  width: 43vw;
+  height: 50vh;
+}
 * body main #game {
   height: 100vh;
 }
@@ -176,8 +192,8 @@
   box-shadow: 1px 1px 10px black;
 }
 * body footer {
-  height: 50vh;
-  margin-top: 3em;
+  height: 60vh;
+  margin-top: 4em;
   padding: 1em 1em;
 }
 * body footer div span {
