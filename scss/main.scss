@@ -60,8 +60,8 @@
         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         background-size: 650% 650%;
         background-repeat: no-repeat;
-        animation: bgGrad 15s ease infinite;
-        -webkit-animation: bgGrad 15s ease infinite;
+       animation: bgGrad 15s ease infinite;
+-webkit-animation: bgGrad 15s ease infinite;
 
         header {
             display: flex;
@@ -349,33 +349,7 @@
     }
 }
 
-@keyframes bgGrad {
-    0% {
-        background-position: 0% 50%;
-    }
 
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-@-webkit-keyframes bgGrad {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
 
 @keyframes aniGirl {
     0% {
@@ -450,5 +424,34 @@
         background-image: url("/images/ani6.jfif");
         background-size: 100%;
         background-repeat: no-repeat;
+    }
+}
+
+
+@keyframes bgGrad {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@-webkit-keyframes bgGrad {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
     }
 }
