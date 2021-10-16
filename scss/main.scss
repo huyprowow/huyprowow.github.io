@@ -1,0 +1,454 @@
+//npm init
+//npm install gulp gulp-sass sass --save-dev
+//npm install -g gulp-cli
+//gulp.cmd
+
+@mixin border {
+    border: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(-45deg, #743ad5, #d53a9d);
+}
+
+@mixin flexContent {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 1em;
+
+    img:hover {
+        box-shadow: 2px 2px 5px 5px rgb(13, 16, 46);
+    }
+}
+
+@mixin menuPosition {
+    position: fixed;
+    z-index: 999;
+    right: 1em;
+    top: 1em;
+}
+
+* {
+    cursor: url("/images/standard.cur"), auto;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    body {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 100vh;
+        //an scrollbar----------
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+        //--------------------
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(-45deg,
+                #fdeff9,
+                #ec38bc,
+                #7303c0,
+                #03001e) fixed;
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(-45deg,
+                #03001e,
+                #7303c0,
+                #ec38bc,
+                #fdeff9,
+                rgb(238, 213, 233)) fixed;
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-size: 650% 650%;
+        background-repeat: no-repeat;
+        animation: bgGrad 15s ease infinite;
+        -webkit-animation: bgGrad 15s ease infinite;
+
+        header {
+            display: flex;
+            flex-direction: row;
+
+            #animation {
+                width: 15vw;
+                height: 15vw;
+                flex: 15;
+                display: inline-block;
+                background-image: url("/images/ani1.jfif");
+                background-size: cover;
+                background-repeat: no-repeat;
+                animation: aniGirl 4s infinite;
+                -webkit-animation: aniGirl 4s infinite;
+                @include border;
+            }
+
+            h1 {
+                flex: 80;
+                font-size: 5vw;
+                margin-top: 5vh;
+                color: #fff;
+                text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09,
+                    0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
+                /* Additional styling */
+                font-family: "Vibur", sans-serif;
+                text-align: center;
+                vertical-align: middle;
+                font-weight: 400;
+                line-height: 1;
+                animation: pulsate 0.11s ease-in-out infinite alternate;
+                -webkit-animation: pulsate 0.11s ease-in-out infinite alternate;
+            }
+        }
+
+        #menu {
+            position: fixed;
+            z-index: 999;
+            right: 1em;
+            top: 1em;
+            font-size: 1.2em;
+        }
+
+        nav {
+            display: flex;
+            flex-flow: column wrap;
+            @include menuPosition;
+            width: 20vw;
+            background-color: transparent;
+            @include border;
+            visibility: hidden;
+            overflow: hidden;
+
+            a {
+                text-decoration: none;
+                color: black;
+                padding: 0.5em;
+                border-bottom: 1px solid;
+                border-image-slice: 1;
+                border-image-source: linear-gradient(-45deg, #743ad5, #d53a9d);
+            }
+
+            a:hover {
+                background-image: linear-gradient(103.3deg,
+                        rgba(162, 186, 245, 1) 30%,
+                        rgba(255, 173, 214, 1) 55.7%,
+                        rgba(252, 225, 208, 1) 81.8%);
+            }
+        }
+
+        main {
+            margin: 1em;
+
+            h2 {
+                padding: 0.5em 0;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            a:hover {
+                font-size: 2em;
+                color: red;
+                transition: 1s;
+            }
+
+            #greeting {
+                pre {
+                    font-family: "Vibur", sans-serif;
+                }
+            }
+
+            #skill {
+                //section
+                height: 50vh;
+
+                ul {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin: 1em;
+
+                    li {
+                        list-style: none;
+                    }
+                }
+            }
+
+            p {
+                padding: 1em;
+            }
+
+            #project {
+                height: 20vh;
+            }
+
+            #certificate {
+                height: 60vh;
+
+                #certi-container {
+                    @include flexContent;
+
+                    img {
+                        width: 20vw;
+                        height: 20vh;
+                    }
+                }
+            }
+
+            #graphic {
+                // height: 70vh;
+
+                #graphic-container {
+                    @include flexContent;
+
+                    iframe{
+                        width: 43vw;
+                        height: 50vw;   
+                    }
+                }
+            }
+
+            #game {
+                height: 100vh;
+
+                #game-container {
+                    @include flexContent;
+
+                    img {
+                        width: 40vw;
+                        height: 50vh;
+                    }
+                }
+            }
+        }
+
+        #scroll-top {
+            position: fixed;
+            z-index: 999;
+            right: 1em;
+            bottom: 1em;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            font-weight: bold;
+            padding-top: 1em;
+            width: 3em;
+            height: 3em;
+            border: 1px solid black;
+            border-radius: 50%;
+            background-color: #fdeff9;
+        }
+
+        #scroll-top:hover {
+            box-shadow: 1px 1px 10px black;
+        }
+
+        footer {
+            height: 60vh;
+            margin-top: 4em;
+            padding: 1em 1em;
+
+            div {
+                span {
+                    display: inline-block;
+                    padding: 0.5em 0em;
+                }
+            }
+
+            a {
+                text-decoration: none;
+
+                i {
+                    border-radius: 50%;
+                    background-color: black;
+                }
+
+                i:hover {
+                    color: black;
+                    background-color: white;
+                }
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+
+    body::-webkit-scrollbar {
+        //an scrollbar
+        display: none;
+    }
+}
+
+@media (max-width: 736px) {
+
+    //6spl
+    #skill {
+        margin-bottom: 10vw;
+    }
+
+    #graphic {
+        #graphic-container {
+            #graphic-1 {
+                width: 100vw;
+                height: 45vh;
+                margin-bottom: 0.5em;
+                iframe {
+                    width:100%;
+                    height: 100%;
+                }
+
+            }
+
+            #graphic-2 {
+                @extend #graphic-1;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #skill {
+        ul {
+            height: 45vh;
+            flex-direction: column;
+            // justify-content:none;
+            text-align: center;
+
+            li {
+                margin: 1em;
+            }
+        }
+    }
+
+    #navbar {
+        width: 25vw;
+    }
+}
+
+@keyframes pulsate {
+    100% {
+        text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #f09,
+            0 0 80px #f09, 0 0 90px #f09, 0 0 100px #f09, 0 0 150px #f09;
+    }
+
+    0% {
+        text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 18px #fff, 0 0 38px #f09,
+            0 0 73px #f09, 0 0 80px #f09, 0 0 94px #f09, 0 0 140px #f09;
+    }
+}
+
+@-webkit-keyframes pulsate {
+    100% {
+        text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #f09,
+            0 0 80px #f09, 0 0 90px #f09, 0 0 100px #f09, 0 0 150px #f09;
+    }
+
+    0% {
+        text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 18px #fff, 0 0 38px #f09,
+            0 0 73px #f09, 0 0 80px #f09, 0 0 94px #f09, 0 0 140px #f09;
+    }
+}
+
+@keyframes bgGrad {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@-webkit-keyframes bgGrad {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes aniGirl {
+    0% {
+        background-image: url("/images/ani1.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    16% {
+        background-image: url("/images/ani2.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    32% {
+        background-image: url("/images/ani3.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    48% {
+        background-image: url("/images/ani4.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    64% {
+        background-image: url("/images/ani5.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    80% {
+        background-image: url("/images/ani6.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+@-webkit-keyframes aniGirl {
+    0% {
+        background-image: url("/images/ani1.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    16% {
+        background-image: url("/images/ani2.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    32% {
+        background-image: url("/images/ani3.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    48% {
+        background-image: url("/images/ani4.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    64% {
+        background-image: url("/images/ani5.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    80% {
+        background-image: url("/images/ani6.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
