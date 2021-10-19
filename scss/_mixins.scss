@@ -1,0 +1,23 @@
+@mixin border {
+    border: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(-45deg, #743ad5, #d53a9d);
+}
+
+@mixin flexContent {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 1em;
+
+    img:hover {
+        box-shadow: 2px 2px 5px 5px rgb(13, 16, 46);
+    }
+}
+
+@mixin menuPosition {
+    position: fixed;
+    z-index: 999;
+    right: 1em;
+    top: 1em;
+}

@@ -1,0 +1,132 @@
+
+
+@keyframes pulsate {
+    100% {
+        text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #f09,
+            0 0 80px #f09, 0 0 90px #f09, 0 0 100px #f09, 0 0 150px #f09;
+    }
+
+    0% {
+        text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 18px #fff, 0 0 38px #f09,
+            0 0 73px #f09, 0 0 80px #f09, 0 0 94px #f09, 0 0 140px #f09;
+    }
+}
+
+@-webkit-keyframes pulsate {
+    100% {
+        text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #f09,
+            0 0 80px #f09, 0 0 90px #f09, 0 0 100px #f09, 0 0 150px #f09;
+    }
+
+    0% {
+        text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 18px #fff, 0 0 38px #f09,
+            0 0 73px #f09, 0 0 80px #f09, 0 0 94px #f09, 0 0 140px #f09;
+    }
+}
+
+
+
+@keyframes aniGirl {
+    0% {
+        background-image: url("/images/ani1.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    16% {
+        background-image: url("/images/ani2.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    32% {
+        background-image: url("/images/ani3.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    48% {
+        background-image: url("/images/ani4.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    64% {
+        background-image: url("/images/ani5.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    80% {
+        background-image: url("/images/ani6.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+@-webkit-keyframes aniGirl {
+    0% {
+        background-image: url("/images/ani1.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    16% {
+        background-image: url("/images/ani2.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    32% {
+        background-image: url("/images/ani3.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    48% {
+        background-image: url("/images/ani4.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    64% {
+        background-image: url("/images/ani5.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    80% {
+        background-image: url("/images/ani6.jfif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+
+@keyframes bgGrad {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@-webkit-keyframes bgGrad {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
