@@ -78,123 +78,32 @@
     background-repeat: no-repeat;
   }
 }
-@keyframes bgGrad {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@-webkit-keyframes bgGrad {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@media (max-width: 736px) {
-  #skill {
-    margin-bottom: 10vw;
-  }
-
-  #graphic #graphic-container #graphic-1, #graphic #graphic-container #graphic-2 {
-    width: 100vw;
-    height: 45vh;
-    margin-bottom: 0.5em;
-  }
-  #graphic #graphic-container #graphic-1 iframe, #graphic #graphic-container #graphic-2 iframe {
-    width: 100%;
-    height: 100%;
-  }
-}
-@media (max-width: 768px) {
-  #skill ul {
-    height: 45vh;
-    flex-direction: column;
-    text-align: center;
-  }
-  #skill ul li {
-    margin: 1em;
-  }
-
-  #navbar {
-    width: 25vw;
-  }
-}
 * {
   cursor: url("/images/standard.cur"), auto;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 * body {
-  display: flex;
-  flex-direction: column;
-  width: auto;
-  height: 100vh;
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(-45deg, #fdeff9, #ec38bc, #7303c0, #03001e) fixed;
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(-45deg, #03001e, #7303c0, #ec38bc, #fdeff9, #eed5e9) fixed;
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  animation: bgGrad 15s ease infinite;
-  -webkit-animation: bgGrad 15s ease infinite;
-  background-size: 650% 650%;
+  background-image: url(/images/bg.png);
+  background-attachment: fixed;
+  background-position: top;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
-* body header {
-  display: flex;
-  flex-direction: row;
-}
-* body header #animation {
-  width: 15vw;
-  height: 15vw;
-  flex: 15;
-  display: inline-block;
-  background-image: url("/images/ani1.jfif");
-  background-size: cover;
-  background-repeat: no-repeat;
-  animation: aniGirl 4s infinite;
-  -webkit-animation: aniGirl 4s infinite;
-  border: 5px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(-45deg, #743ad5, #d53a9d);
-}
-* body header h1 {
-  flex: 80;
-  font-size: 5vw;
-  margin-top: 5vh;
-  color: #fff;
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09, 0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
-  /* Additional styling */
-  font-family: "Vibur", sans-serif;
-  text-align: center;
-  vertical-align: middle;
-  font-weight: 400;
-  line-height: 1;
-  animation: pulsate 0.11s ease-in-out infinite alternate;
-  -webkit-animation: pulsate 0.11s ease-in-out infinite alternate;
-}
-* body #menu {
+* body #nav-container #menu {
   position: fixed;
   z-index: 999;
   right: 1em;
   top: 1em;
   font-size: 1.2em;
 }
-* body nav {
+* body #nav-container nav {
   display: flex;
   flex-flow: column wrap;
   position: fixed;
@@ -206,10 +115,11 @@
   border: 5px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(-45deg, #743ad5, #d53a9d);
-  visibility: hidden;
+  right: -25vw;
   overflow: hidden;
+  transition: right 0.5s;
 }
-* body nav a {
+* body #nav-container nav a {
   text-decoration: none;
   color: black;
   padding: 0.5em;
@@ -217,88 +127,166 @@
   border-image-slice: 1;
   border-image-source: linear-gradient(-45deg, #743ad5, #d53a9d);
 }
-* body nav a:hover {
+* body #nav-container nav a:hover {
   background-image: linear-gradient(103.3deg, #a2baf5 30%, #ffadd6 55.7%, #fce1d0 81.8%);
 }
-* body main {
-  margin: 1em;
+* body #content-wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  height: auto;
+  top: 75vh;
+  backdrop-filter: blur(20px);
+  box-shadow: -2px -2px 12px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 7px;
 }
-* body main h2 {
+* body #content-wrapper header #animation {
+  position: absolute;
+  top: -12em;
+  width: 30vw;
+  height: 30vw;
+  display: inline-block;
+  background-image: url("/images/ani1.jfif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 5px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(-45deg, #743ad5, #d53a9d);
+}
+* body #content-wrapper header h1 {
+  position: absolute;
+  top: -2em;
+  right: 1.1em;
+  font-size: 5vw;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09, 0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
+  /* Additional styling */
+  font-family: "Vibur", sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 400;
+  line-height: 1;
+}
+* body #content-wrapper main {
+  font-size: 20px;
+}
+* body #content-wrapper main h2 {
   padding: 0.5em 0;
 }
-* body main a {
+* body #content-wrapper main a {
   text-decoration: none;
+  color: #f09;
+  font-weight: bold;
 }
-* body main a:hover {
+* body #content-wrapper main a:hover {
   font-size: 2em;
   color: red;
   transition: 1s;
 }
-* body main #greeting pre {
+* body #content-wrapper main #greeting {
+  position: relative;
+  height: 30vh;
+  width: 55vw;
+  top: 1em;
+  left: 35vw;
+}
+* body #content-wrapper main #greeting pre {
+  font-size: 24px;
   font-family: "Vibur", sans-serif;
 }
-* body main #skill {
+* body #content-wrapper main #skill {
   height: 50vh;
 }
-* body main #skill ul {
+* body #content-wrapper main #skill ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 1em;
 }
-* body main #skill ul li {
+* body #content-wrapper main #skill ul li {
   list-style: none;
 }
-* body main p {
+* body #content-wrapper main p {
   padding: 1em;
 }
-* body main #project {
-  height: 20vh;
+* body #content-wrapper main #project {
+  height: 22vh;
 }
-* body main #certificate {
+* body #content-wrapper main #certificate {
   height: 60vh;
 }
-* body main #certificate #certi-container {
+* body #content-wrapper main #certificate #certi-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   padding: 1em;
 }
-* body main #certificate #certi-container img:hover {
+* body #content-wrapper main #certificate #certi-container img:hover {
   box-shadow: 2px 2px 5px 5px #0d102e;
 }
-* body main #certificate #certi-container img {
+* body #content-wrapper main #certificate #certi-container img {
   width: 20vw;
   height: 20vh;
 }
-* body main #graphic #graphic-container {
+* body #content-wrapper main #graphic #graphic-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   padding: 1em;
 }
-* body main #graphic #graphic-container img:hover {
+* body #content-wrapper main #graphic #graphic-container img:hover {
   box-shadow: 2px 2px 5px 5px #0d102e;
 }
-* body main #graphic #graphic-container iframe {
-  width: 43vw;
-  height: 50vw;
+* body #content-wrapper main #graphic #graphic-container #graphic-1, * body #content-wrapper main #graphic #graphic-container #graphic-2 {
+  width: 45%;
+  height: 45vh;
+  margin: 0.5em;
 }
-* body main #game {
+* body #content-wrapper main #graphic #graphic-container #graphic-1 iframe, * body #content-wrapper main #graphic #graphic-container #graphic-2 iframe {
+  width: 100%;
+  height: 100%;
+}
+* body #content-wrapper main #game {
   height: 100vh;
 }
-* body main #game #game-container {
+* body #content-wrapper main #game #game-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   padding: 1em;
 }
-* body main #game #game-container img:hover {
+* body #content-wrapper main #game #game-container img:hover {
   box-shadow: 2px 2px 5px 5px #0d102e;
 }
-* body main #game #game-container img {
+* body #content-wrapper main #game #game-container img {
   width: 40vw;
   height: 50vh;
+}
+* body #content-wrapper footer {
+  height: 30vh;
+  margin-top: 5em;
+  padding: 1em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+* body #content-wrapper footer #contact div span {
+  display: inline-block;
+  padding: 0.5em 0em;
+}
+* body #content-wrapper footer #contact a {
+  text-decoration: none;
+}
+* body #content-wrapper footer #contact a i {
+  border-radius: 50%;
+  background-color: black;
+}
+* body #content-wrapper footer #contact a i:hover {
+  color: black;
+  background-color: #fff;
+}
+* body #content-wrapper footer p {
+  text-align: center;
 }
 * body #scroll-top {
   position: fixed;
@@ -315,33 +303,68 @@
   border: 1px solid black;
   border-radius: 50%;
   background-color: #fdeff9;
+  visibility: hidden;
 }
 * body #scroll-top:hover {
   box-shadow: 1px 1px 10px black;
 }
-* body footer {
-  height: 60vh;
-  margin-top: 4em;
-  padding: 1em 1em;
-}
-* body footer div span {
-  display: inline-block;
-  padding: 0.5em 0em;
-}
-* body footer a {
-  text-decoration: none;
-}
-* body footer a i {
-  border-radius: 50%;
-  background-color: black;
-}
-* body footer a i:hover {
-  color: black;
-  background-color: #fff;
-}
-* body footer p {
-  text-align: center;
-}
 * body::-webkit-scrollbar {
   display: none;
+}
+
+@media (max-width: 1224px) {
+  body {
+    background-position: 75% 0%;
+    background-size: cover;
+  }
+  body #content-wrapper {
+    top: 70vw;
+  }
+  body #content-wrapper header #animation {
+    top: -15vw;
+  }
+  body #content-wrapper main {
+    font-size: 18px;
+  }
+  body #content-wrapper main #greeting {
+    left: 13vw;
+  }
+  body #content-wrapper main #greeting pre {
+    font-size: 3vw;
+  }
+  body #content-wrapper main #skill ul {
+    height: 45vh;
+    flex-direction: column;
+    text-align: center;
+  }
+  body #content-wrapper main #skill ul li {
+    margin: 1em;
+  }
+  body #content-wrapper main #project {
+    margin-top: 5vh;
+  }
+  body #scroll-top {
+    visibility: visible !important;
+  }
+}
+@media (max-width: 1024px) {
+  body #content-wrapper main #greeting {
+    height: 19vw;
+  }
+  body #navbar {
+    width: 25vw;
+  }
+}
+@media (max-width: 414px) {
+  body #content-wrapper main #skill {
+    margin-bottom: 10vw;
+  }
+  body #content-wrapper main #graphic #graphic-container #graphic-1, body #content-wrapper main #graphic #graphic-container #graphic-2 {
+    width: 100%;
+    height: 45vh;
+  }
+  body #content-wrapper main #graphic #graphic-container #graphic-1 iframe, body #content-wrapper main #graphic #graphic-container #graphic-2 iframe {
+    width: 100%;
+    height: 100%;
+  }
 }

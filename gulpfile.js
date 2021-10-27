@@ -10,13 +10,13 @@ const sass=require('gulp-sass')(require('sass'));//truyen require sass de bien d
 
 
 function buildStyles(){
-    return src("scss/main.scss")//dau vao
+    return src("scss/**/*.scss")//dau vao
     .pipe(sass())//import sass plugin (dong 4)
     .pipe(dest("src/css"))//noi bien dich ra
 }
 
 function watchTask() {//wath khi file thay doi compile lai de dong bo
-    watch(["scss/main.scss"],buildStyles)//file can watch,ham build
+    watch(["scss/**/*.scss"],buildStyles)//file can watch,ham build
 }
 
 //xuat
