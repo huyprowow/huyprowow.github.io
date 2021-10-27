@@ -318,11 +318,10 @@
 
 @media (max-width: 1224px) {
   body {
-    background-position: 75% 0%;
-    background-size: cover;
+    background-image: url(/images/bg2.JPG);
   }
   body #content-wrapper {
-    top: 70vw;
+    top: 45vw;
   }
   body #content-wrapper header #animation {
     top: -15vw;
@@ -352,11 +351,11 @@
   }
 }
 @media (max-width: 1024px) {
+  body #nav-container #navbar {
+    width: 20vh;
+  }
   body #content-wrapper main #greeting {
     height: 19vw;
-  }
-  body #navbar {
-    width: 25vw;
   }
 }
 @media (max-width: 414px) {

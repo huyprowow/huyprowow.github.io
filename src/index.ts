@@ -9,7 +9,7 @@ menu.addEventListener("click", () => {
 });
 navBar.addEventListener("click", () => {
   menu.style.visibility = "visible";
-  navBar.style.right='-25vw';
+  navBar.style.right='-40vh';
 });
 // console.log(menu, navBar);
 

@@ -1,9 +1,8 @@
 @media (max-width: 1224px) {
   body {
-    background-position: 75% 0%;
-    background-size: cover;
+    background-image: url(/images/bg2.JPG);
     #content-wrapper {
-      top: 70vw;
+      top: 45vw;
       header {
         #animation {
           top: -15vw;
@@ -42,15 +41,18 @@
 @media (max-width: 1024px) {
   //ipad
   body {
+    #nav-container {
+
+      #navbar {
+        width: 20vh;
+      }
+    }
     #content-wrapper {
       main {
         #greeting {
           height: 19vw;
         }
       }
-    }
-    #navbar {
-      width: 25vw;
     }
   }
 }
