@@ -149,6 +149,8 @@
   background-image: url("/images/ani1.jfif");
   background-size: cover;
   background-repeat: no-repeat;
+  animation: aniGirl 4s infinite;
+  -webkit-animation: aniGirl 4s infinite;
   border: 5px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(-45deg, #743ad5, #d53a9d);
@@ -166,6 +168,8 @@
   vertical-align: middle;
   font-weight: 400;
   line-height: 1;
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+  -webkit-animation: pulsate 0.11s ease-in-out infinite alternate;
 }
 * body #content-wrapper main {
   font-size: 20px;

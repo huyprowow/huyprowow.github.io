@@ -90,8 +90,8 @@
           background-image: url("/images/ani1.jfif");
           background-size: cover;
           background-repeat: no-repeat;
-          // animation: aniGirl 4s infinite;
-          // -webkit-animation: aniGirl 4s infinite;
+          animation: aniGirl 4s infinite;
+          -webkit-animation: aniGirl 4s infinite;
           @include mixins.border;
         }
 
@@ -111,8 +111,8 @@
           vertical-align: middle;
           font-weight: 400;
           line-height: 1;
-          // animation: pulsate 0.11s ease-in-out infinite alternate;
-          // -webkit-animation: pulsate 0.11s ease-in-out infinite alternate;
+          animation: pulsate 0.11s ease-in-out infinite alternate;
+          -webkit-animation: pulsate 0.11s ease-in-out infinite alternate;
         }
       }
 
