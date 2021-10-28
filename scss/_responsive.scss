@@ -23,7 +23,7 @@
 
   body {
     background-image: none;
-    background-color: transparent;
+    // background-color: transparent;
     #nav-container {
       color: variables.$black;
       font-size: 18px;
@@ -33,7 +33,7 @@
       }
     }
     #content-wrapper {
-      // z-index: 3;
+      z-index:-1;
       color: variables.$black;
       top: 45vw;
       header {
