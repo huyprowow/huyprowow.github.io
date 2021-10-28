@@ -1,25 +1,33 @@
-@use 'variables';
+@use "variables";
 @keyframes pulsate {
   100% {
-    text-shadow: 0 0 4px variables.$white, 0 0 11px variables.$white, 0 0 19px variables.$white, 0 0 40px variables.$pink,
-      0 0 80px variables.$pink, 0 0 90px variables.$pink, 0 0 100px variables.$pink, 0 0 150px variables.$pink;
+    text-shadow: 0 0 4px variables.$white, 0 0 11px variables.$white,
+      0 0 19px variables.$white, 0 0 40px variables.$pink,
+      0 0 80px variables.$pink, 0 0 90px variables.$pink,
+      0 0 100px variables.$pink, 0 0 150px variables.$pink;
   }
 
   0% {
-    text-shadow: 0 0 4px variables.$white, 0 0 10px variables.$white, 0 0 18px variables.$white, 0 0 38px variables.$pink,
-      0 0 73px variables.$pink, 0 0 80px variables.$pink, 0 0 94px variables.$pink, 0 0 140px variables.$pink;
+    text-shadow: 0 0 4px variables.$white, 0 0 10px variables.$white,
+      0 0 18px variables.$white, 0 0 38px variables.$pink,
+      0 0 73px variables.$pink, 0 0 80px variables.$pink,
+      0 0 94px variables.$pink, 0 0 140px variables.$pink;
   }
 }
 
 @-webkit-keyframes pulsate {
   100% {
-    text-shadow: 0 0 4px variables.$white, 0 0 11px variables.$white, 0 0 19px variables.$white, 0 0 40px variables.$pink,
-      0 0 80px variables.$pink, 0 0 90px variables.$pink, 0 0 100px variables.$pink, 0 0 150px variables.$pink;
+    text-shadow: 0 0 4px variables.$white, 0 0 11px variables.$white,
+      0 0 19px variables.$white, 0 0 40px variables.$pink,
+      0 0 80px variables.$pink, 0 0 90px variables.$pink,
+      0 0 100px variables.$pink, 0 0 150px variables.$pink;
   }
 
   0% {
-    text-shadow: 0 0 4px variables.$white, 0 0 10px variables.$white, 0 0 18px variables.$white, 0 0 38px variables.$pink,
-      0 0 73px variables.$pink, 0 0 80px variables.$pink, 0 0 94px variables.$pink, 0 0 140px variables.$pink;
+    text-shadow: 0 0 4px variables.$white, 0 0 10px variables.$white,
+      0 0 18px variables.$white, 0 0 38px variables.$pink,
+      0 0 73px variables.$pink, 0 0 80px variables.$pink,
+      0 0 94px variables.$pink, 0 0 140px variables.$pink;
   }
 }
 
@@ -99,30 +107,44 @@
   }
 }
 
-// @keyframes bgGrad {
-//   0% {
-//     background-position: 0% 50%;
-//   }
+@keyframes bgGrad {
+  0% {
+    background-position: 0% 50%;
+  }
 
-//   50% {
-//     background-position: 100% 50%;
-//   }
+  50% {
+    background-position: 100% 50%;
+  }
 
-//   100% {
-//     background-position: 0% 50%;
-//   }
-// }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
-// @-webkit-keyframes bgGrad {
-//   0% {
-//     background-position: 0% 50%;
-//   }
+@-webkit-keyframes bgGrad {
+  0% {
+    background-position: 0% 50%;
+  }
 
-//   50% {
-//     background-position: 100% 50%;
-//   }
+  50% {
+    background-position: 100% 50%;
+  }
 
-//   100% {
-//     background-position: 0% 50%;
-//   }
-// }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes para {
+  100% {
+    background-position: -5000px 20%, -800px 95%, 500px 50%, 1000px 100%,
+      400px 0;
+  }
+}
+@keyframes move {
+  from {
+    transform: rotate(0deg) scale(12) translateX(-20px);
+  }
+  to {
+    transform: rotate(360deg) scale(18) translateX(20px);
+  }
+}

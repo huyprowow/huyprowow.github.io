@@ -1,15 +1,27 @@
+@use "keyframes"; //duong dan file
+@use "variables";
+@use "mixins";
 @media (max-width: 1224px) {
+  body,
+  head {
+    display: block;
+    font-size: 52px;
+    color: transparent;
+  }
+
   body {
-    // background-position: 50% bottom;
-    background-size: cover;
-    background-image: url(/images/bg3.jpg);
+    background-image: none;
     #nav-container {
+      color: variables.$black;
+      font-size: 18px;
       #navbar {
         // width: 35vw;
         width: 140px;
       }
     }
     #content-wrapper {
+      z-index: 1;
+      color: variables.$black;
       top: 45vw;
       header {
         #animation {
@@ -41,8 +53,51 @@
       }
     }
     #scroll-top {
+      color: variables.$black;
+      font-size: 18px;
       visibility: visible !important;
     }
+    footer {
+      font-size: 18px;
+    }
+  }
+
+  head::before,
+  head::after,
+  body::before,
+  body::after {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 3em;
+    height: 3em;
+    content: ".";
+    mix-blend-mode: screen;
+    animation: 44s -27s move infinite ease-in-out alternate;
+  }
+
+  body::before {
+    @include mixins.dots(40);
+    animation-duration: 44s;
+    animation-delay: -27s;
+  }
+
+  body::after {
+    @include mixins.dots(40);
+    animation-duration: 43s;
+    animation-delay: -32s;
+  }
+
+  head::before {
+    @include mixins.dots(40);
+    animation-duration: 42s;
+    animation-delay: -23s;
+  }
+
+  head::after {
+    @include mixins.dots(40);
+    animation-duration: 41s;
+    animation-delay: -19s;
   }
 }
 
@@ -88,3 +143,46 @@
     }
   }
 }
+
+html::before {
+  letter-spacing: 0.5em;
+  text-shadow: 0 0 5px #000;
+  white-space: pre;
+  color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #999;
+}
+
+/* hay vcl:)))
+html {
+	height: 100%;
+	// max-height: 600px; 
+	width: 1000px;
+	background-color: hsla(200,40%,30%,.4);
+	background-image:		
+		url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'), 
+		url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
+		url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
+		url('https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png'),
+		url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
+	background-repeat: repeat-x;
+	background-position: 
+		0 20%,
+		0 100%,
+		0 50%,
+		0 100%,
+		0 0;
+	background-size: 
+		2500px,
+		800px,
+		500px 200px,
+		1000px,
+		400px 260px;
+	animation: 50s para infinite linear;
+	}
+  */

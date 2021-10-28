@@ -21,3 +21,14 @@
     right: 1em;
     top: 1em;
 }
+@mixin dots($count) {
+    $text-shadow: ();
+    @for $i from 0 through $count {
+      $text-shadow: $text-shadow,
+                   (-.5+(random()) * 3) + em
+                   (-.5+(random()) * 3) + em
+                   7px
+                   hsla(random() * 360, 100%, 50%,.9);
+    }
+    text-shadow: $text-shadow;
+  }
