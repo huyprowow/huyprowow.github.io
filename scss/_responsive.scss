@@ -2,7 +2,9 @@
 @use "variables";
 @use "mixins";
 @media (max-width: 1224px) {
+  
   html::before {
+    z-index: -3;
     content: "";
     letter-spacing: 0.5em;
     text-shadow: 0 0 5px #000;
@@ -15,14 +17,16 @@
   }
   body,
   head {
-    // z-index:2;
+    z-index:-1;
     display: block;
     font-size: 52px;
     color: transparent;
+    background-color: transparent;
   }
 
   body {
     background-image: none;
+    // background-color:yellow;
     // background-color: transparent;
     #nav-container {
       color: variables.$black;
@@ -33,7 +37,7 @@
       }
     }
     #content-wrapper {
-      z-index:-1;
+      z-index:1;
       color: variables.$black;
       top: 45vw;
       header {
@@ -79,6 +83,7 @@
   head::after,
   body::before,
   body::after {
+    background-color:transparent;
     position: fixed;
     top: 50%;
     left: 50%;
