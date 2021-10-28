@@ -2,7 +2,6 @@
 @use "variables";
 @use "mixins";
 @media (max-width: 1224px) {
-  
   // html::before {
   //   z-index: -2;
   //   content: "";
@@ -17,7 +16,7 @@
   // }
   body,
   head {
-    z-index:-1;
+    z-index: -1;
     display: block;
     font-size: 52px;
     color: transparent;
@@ -29,23 +28,27 @@
     background-image: none;
     // background-color: transparent;
     #nav-container {
-      color:variables.$white;
+      color: variables.$white;
       font-size: 18px;
       #navbar {
+        background-color: black;
         // width: 35vw;
         width: 140px;
-        a{
+        a {
           color: variables.$white;
         }
       }
     }
     #content-wrapper {
-      z-index:2;
+      z-index: 2;
       color: variables.$white;
       top: 45vw;
       header {
         #animation {
           top: -15vw;
+        }
+        h1 {
+          font-size: 6vw;
         }
       }
       main {
@@ -86,7 +89,7 @@
   head::after,
   body::before,
   body::after {
-    background-color:transparent;
+    background-color: transparent;
     z-index: 1;
     position: fixed;
     top: 50%;
@@ -165,8 +168,6 @@
     }
   }
 }
-
-
 
 /* hay vcl:)))
 html {
