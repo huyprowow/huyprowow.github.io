@@ -319,7 +319,7 @@
 @media (max-width: 1224px) {
   body {
     background-size: cover;
-    background-image: url(/images/bg3.JPG);
+    background-image: url(/images/bg3.jpg);
   }
   body #nav-container #navbar {
     width: 140px;
