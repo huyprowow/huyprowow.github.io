@@ -11,8 +11,10 @@
 
   body {
     background-image: none;
+    background-color: transparent;
     #nav-container {
       color: variables.$black;
+      background: transparent;
       font-size: 18px;
       #navbar {
         // width: 35vw;
