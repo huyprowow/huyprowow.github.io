@@ -1,6 +1,14 @@
 @media (max-width: 1224px) {
   body {
-    background-image: url(/images/bg2.JPG);
+    // background-position: 50% bottom;
+    background-size:cover ;
+    background-image: url(/images/bg3.JPG);
+    #nav-container {
+      #navbar {
+        // width: 35vw;
+        width: 140px;
+      }
+    }
     #content-wrapper {
       top: 45vw;
       header {
@@ -27,8 +35,8 @@
             }
           }
         }
-        #project{
-          margin-top:5vh;
+        #project {
+          margin-top: 5vh;
         }
       }
     }
@@ -41,12 +49,7 @@
 @media (max-width: 1024px) {
   //ipad
   body {
-    #nav-container {
-
-      #navbar {
-        width: 20vh;
-      }
-    }
+    
     #content-wrapper {
       main {
         #greeting {

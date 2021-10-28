@@ -25,7 +25,6 @@
     scrollbar-width: none;
     /* Firefox */
     //--------------------
-
     background-image: url(/images/bg.png);
     background-attachment: fixed;
     background-position: top;
@@ -48,7 +47,7 @@
         width: 20vw;
         background-color: transparent;
         @include mixins.border;
-        right:-25vw;
+        right:-40vh;
         overflow: hidden;
         transition:right 0.5s;
 

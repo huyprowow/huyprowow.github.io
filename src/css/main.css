@@ -115,7 +115,7 @@
   border: 5px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(-45deg, #743ad5, #d53a9d);
-  right: -25vw;
+  right: -40vh;
   overflow: hidden;
   transition: right 0.5s;
 }
@@ -318,7 +318,11 @@
 
 @media (max-width: 1224px) {
   body {
-    background-image: url(/images/bg2.JPG);
+    background-size: cover;
+    background-image: url(/images/bg3.JPG);
+  }
+  body #nav-container #navbar {
+    width: 140px;
   }
   body #content-wrapper {
     top: 45vw;
@@ -351,9 +355,6 @@
   }
 }
 @media (max-width: 1024px) {
-  body #nav-container #navbar {
-    width: 20vh;
-  }
   body #content-wrapper main #greeting {
     height: 19vw;
   }
