@@ -12,11 +12,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background: transparent;
   }
   body,
   head {
-    z-index:2;
+    // z-index:2;
     display: block;
     font-size: 52px;
     color: transparent;
@@ -27,7 +26,6 @@
     background-color: transparent;
     #nav-container {
       color: variables.$black;
-      background: transparent;
       font-size: 18px;
       #navbar {
         // width: 35vw;
@@ -35,7 +33,7 @@
       }
     }
     #content-wrapper {
-      z-index: 3;
+      // z-index: 3;
       color: variables.$black;
       top: 45vw;
       header {
