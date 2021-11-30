@@ -1,34 +1,36 @@
 @mixin border {
-    border: 5px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(-45deg, #743ad5, #d53a9d);
+  border: 5px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(-45deg, #743ad5, #d53a9d);
 }
 
 @mixin flexContent {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 1em;
 
-    img:hover {
-        box-shadow: 2px 2px 5px 5px rgb(13, 16, 46);
-    }
+  img:hover {
+    box-shadow: 2px 2px 5px 5px rgb(13, 16, 46);
+  }
 }
 
 @mixin menuPosition {
-    position: fixed;
-    z-index: 999;
-    right: 1em;
-    top: 1em;
+  position: fixed;
+  z-index: 999;
+  right: 1em;
+  top: 1em;
 }
 @mixin dots($count) {
-    $text-shadow: ();
-    @for $i from 0 through $count {
-      $text-shadow: $text-shadow,
-                   (-.5+(random()) * 3) + em
-                   (-.5+(random()) * 3) + em
-                   7px
-                   hsla(random() * 360, 100%, 50%,.9);
-    }
-    text-shadow: $text-shadow;
+  $text-shadow: ();
+  @for $i from 0 through $count {
+    $text-shadow: $text-shadow,
+      (-0.5+ (random()) * 3) +
+        em
+        (-0.5+ (random()) * 3) +
+        em
+        7px
+        hsla(random() * 360, 100%, 50%, 0.9);
   }
+  text-shadow: $text-shadow;
+}

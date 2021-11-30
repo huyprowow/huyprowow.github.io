@@ -147,16 +147,18 @@
 
         #skill {
           //section
-          height: 50vh;
+          height: 65vh;
 
           ul {
             display: flex;
             justify-content: space-around;
-            align-items: center;
+            align-items: flex-start;
             margin: 1em;
 
             li {
               list-style: none;
+              height: 100%;
+              width: 100%;
             }
           }
         }
@@ -280,4 +282,23 @@
     //an scrollbar
     display: none;
   }
+}
+
+//d3
+.d3-label {
+  border-radius: 5px;
+  margin: 5px 0;
+  height: 25px;
+}
+.d3-bar {
+  // background-color: #ffe7a9;
+  background-color: variables.$orange;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin: 5px 0;
+  // transition: width .5s cubic-bezier(1, .01, 0, 1);
+  height: 25px;
 }
