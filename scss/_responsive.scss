@@ -180,6 +180,21 @@
     }
   }
 }
+@media (max-height: 414px) {
+  //ip mh ngang
+  body {
+    #content-wrapper {
+      main {
+        #skill {
+          height: 90vw;
+          ul {
+            top: 25vw;
+          }
+        }
+      }
+    }
+  }
+}
 
 /* hay vcl:)))
 html {
