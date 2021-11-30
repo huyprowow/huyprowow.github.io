@@ -10,7 +10,7 @@ menu.addEventListener("click", () => {
 });
 navBar.addEventListener("click", () => {
     menu.style.visibility = "visible";
-    navBar.style.right = "-255px";
+    navBar.style.right = "-16.5em";
 });
 // console.log(menu, navBar);
 /*--------- Scroll top btn ---------*/

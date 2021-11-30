@@ -11,7 +11,7 @@ menu.addEventListener("click", () => {
 });
 navBar.addEventListener("click", () => {
   menu.style.visibility = "visible";
-  navBar.style.right = "-255px";
+  navBar.style.right = "-16.5em";
 });
 // console.log(menu, navBar);
 
@@ -56,7 +56,7 @@ const datas = [
   [
     ["React", 70],
     ["Redux", 30],
-    ["Scss",40],
+    ["Scss", 40],
     ["Express", 40],
     ["BootStrap", 20],
     ["JQuery", 20],

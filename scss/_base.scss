@@ -18,13 +18,13 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  //an scrollbar----------
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  //--------------------
   body {
-    //an scrollbar----------
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-    //--------------------
     background-image: url(/images/bg.png);
     background-attachment: fixed;
     background-position: top;
@@ -46,7 +46,7 @@
         width: 20vw;
         background-color: transparent;
         @include mixins.border;
-        right: -40vh;
+        right: -16.5em;
         overflow: hidden;
         transition: right 0.5s;
 
