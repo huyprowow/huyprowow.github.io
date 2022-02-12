@@ -11,6 +11,15 @@
   padding: 1em;
 
   img:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 5px 5px rgb(13, 16, 46);
+  }
+}
+@mixin gridContent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  img:hover {
+    cursor: pointer;
     box-shadow: 2px 2px 5px 5px rgb(13, 16, 46);
   }
 }

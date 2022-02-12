@@ -10,7 +10,7 @@ menu.addEventListener("click", () => {
 });
 navBar.addEventListener("click", () => {
     menu.style.visibility = "visible";
-    navBar.style.right = "-16.5em";
+    navBar.style.right = "-17.5em";
 });
 // console.log(menu, navBar);
 /*--------- Scroll top btn ---------*/
@@ -77,3 +77,26 @@ sections.forEach((section, i) => {
         .attr("class", "d3-bar")
         .style("width", (d) => d[1] + "%");
 });
+// /*----------------------- preload -----------------*/
+// const container = document.querySelector(
+//     ".progress-bar-container"
+//   ) as HTMLDivElement,
+//   bar = document.querySelector(".progress-bar") as HTMLDivElement,
+//   counter = document.querySelector(".count") as HTMLHeadingElement,
+//   throttle = 77.7; // 0-100
+// let i = 0;
+// (function draw() {
+//   if (i <= 100) {
+//     let r = Math.random() * 2.5;
+//     requestAnimationFrame(draw);
+//     bar.style.width = i + "%";
+//     counter.textContent = Math.round(i) + "%";
+//     // window.scrollTo(0, 0);
+//     if (r < throttle / 10) {
+//       // Mô phỏng tốc độ d / l và tốc độ bit không đồng đều
+//       i = i + r;
+//     }
+//   } else {
+//     container.className += " done";
+//   }
+// })();

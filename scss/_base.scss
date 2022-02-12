@@ -11,6 +11,7 @@
 //colors
 //components(button, card, navbar)
 //utilities(margin, padding, opacity)
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300);
 
 * {
   cursor: url("/images/standard.cur"), auto;
@@ -30,6 +31,62 @@
     background-position: top;
     background-size: 100%;
     background-repeat: no-repeat;
+
+    // .progress-bar-container {
+    //   position: fixed;
+    //   z-index: 10000;
+    //   padding: 0;
+    //   margin: 0;
+    //   height: 100vh;
+    //   width: 100vw;
+    //   font-family: "Raleway";
+    //   background-color: black;
+    //   overflow: hidden;
+    //   // touch-action: none;
+
+    //   #wolf-gif {
+    //     margin: 0 auto;
+    //     top: -2px;
+    //     position: inherit;
+    //     width:800px;
+    //     height: 600px;
+    //   }
+    //   .progress-bar {
+    //     position: inherit;
+    //     height: 2px;
+    //     background: #00ffff;
+    //     width: 0%;
+    //     top: 60%;
+    //     &:hover {
+    //       width: 100%;
+    //       transition: width 0.5s ease-in-out;
+    //     }
+    //     #loading {
+    //       position: inherit;
+    //       left: 40%;
+    //       top: 47%;
+    //       width: 100%;
+    //       text-align: center;
+    //       font-weight: 100;
+    //       font-size: 3rem;
+    //       color: #00ffff;
+    //     }
+    //     .count {
+    //       position: inherit;
+    //       left: 15%;
+    //       top: 60%;
+    //       width: 100%;
+    //       text-align: center;
+    //       font-weight: 100;
+    //       font-size: 3rem;
+    //       color: #00ffff;
+    //     }
+    //   }
+    // }
+    // .done {
+    //   display: none;
+    // }
+
     #nav-container {
       #menu {
         position: fixed;
@@ -46,7 +103,7 @@
         width: 20vw;
         background-color: transparent;
         @include mixins.border;
-        right: -16.5em;
+        right: -17.5em;
         overflow: hidden;
         transition: right 0.5s;
 
@@ -86,7 +143,7 @@
           width: 30vw;
           height: 30vw;
           display: inline-block;
-          background-image: url("/images/ani1.jfif");
+          background-image: url("/images/ani1.png");
           background-size: cover;
           background-repeat: no-repeat;
           animation: aniGirl 4s infinite;
@@ -147,7 +204,7 @@
 
         #skill {
           //section
-          height: 65vh;
+          height: 75vh;
 
           ul {
             display: flex;
@@ -168,7 +225,27 @@
         }
 
         #project {
-          height: 22vh;
+          height: 35vh;
+          padding: 0;
+          #project-list {
+            margin-top: -5vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 100%;
+            height: 100%;
+
+            padding: 1em;
+            .project-item {
+              list-style: none;
+              // margin: 10px 0;
+              &::before {
+                position: relative;
+                left: -5px;
+                content: "\269d";
+              }
+            }
+          }
         }
 
         #certificate {
